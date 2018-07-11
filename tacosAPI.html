@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <title>Tacos</title>
+
+
+</head>
+
+<body>
+
+  <h1>Which Taco are you Craving? Refresh the page for a random taco recipe!! </h1>
+
+  <h3>Taco Shell Recipe</h3>
+  <p id="shell"></p>
+
+  <h3>Taco Mixin Recipe</h3>
+  <p id="mixin"></p>
+
+  <h3>Taco Seasoning Recipe</h3>
+  <p id="seasoning"></p>
+
+  <h3>Taco Condiment Recipe</h3>
+  <p id="condiment"></p>
+
+
+
+  <script type="text/javascript">
+
+    var queryURL = "http://taco-randomizer.herokuapp.com/random/"
+
+    $.ajax({ url: queryURL, method: "GET" }).then(function (res) {
+      console.log(res)
+      $("#shell").text(res.shell.recipe)
+      $("#mixin").text(res.mixin.recipe)
+      $("#seasoning").text(res.seasoning.recipe)
+      $("#condiment").text(res.condiment.recipe)
+
+
+
+    })
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
