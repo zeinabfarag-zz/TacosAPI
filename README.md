@@ -1,6 +1,6 @@
 # TacosAPI
 
-This is a simple static website made using a public Taco Recipe API with AJAX and HTML. Refresh the page to render different recipes from the API. 
+This is a simple static website made using a public Taco Recipe API with jQuery and HTML. Refresh the page to render different recipes from the API. 
 
 ## Website
 
